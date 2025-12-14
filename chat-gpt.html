@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Style Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+    }
+
+    /* Sidebar kiri */
+    .sidebar {
+      width: 260px;
+      background-color: #202123;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .chat-list {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .chat-item {
+      padding: 10px;
+      margin-bottom: 5px;
+      background-color: #2a2b32;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .chat-item:hover {
+      background-color: #343541;
+    }
+
+    /* Area utama */
+    .main {
+      flex: 1;
+      background-color: #343541;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+
+    .chat-area {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 15px;
+    }
+
+    .message.user {
+      text-align: right;
+    }
+
+    .input-area {
+      padding: 15px;
+      background-color: #40414f;
+      display: flex;
+      gap: 10px;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .input-area button {
+      background-color: #10a37f;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .input-area button:hover {
+      background-color: #0d8c6e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar kiri -->
+  <div class="sidebar">
+    <h2>Chats</h2>
+    <div class="chat-list">
+      <div class="chat-item">Percakapan 1</div>
+      <div class="chat-item">Percakapan 2</div>
+      <div class="chat-item">Percakapan 3</div>
+    </div>
+  </div>
+
+  <!-- Area utama -->
+  <div class="main">
+    <div class="chat-area">
+      <div class="message user"><em>Customer Service Hotel</em></div>
+      <div class="message bot">Hai! Ada yang bisa saya bantu?</div>
+    </div>
+
+    <!-- Input -->
+    <div class="input-area">
+      <input type="text" placeholder="Ketik pesan...">
+      <button>Kirim</button>
+    </div>
+  </div>
+
+</body>
+</html>
